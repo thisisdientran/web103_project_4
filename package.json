@@ -2,9 +2,10 @@
   "name": "boltbucket",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"cd client && vite\" \"cd server && nodemon server\"",
+    "dev": "node scripts/dev.js",
     "start": "cd server && node server",
-    "build": "cd client && vite build"
+    "build": "cd client && node ../node_modules/vite/bin/vite.js build",
+    "reset": "node server/config/reset.js"
   },
   "dependencies": {
     "@picocss/pico": "^1.5.7",
